@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import LifeCycleSample from "../hello-react-tutorial/src/LifeCycleSample";
-import ErrorBoundary from "../hello-react-tutorial/src/ErrorBoundary";
+import LifeCycleSample from "./LifeCycleSample";
+import ErrorBoundary from "./ErrorBoundary";
 
 class App extends Component {
   state = {
