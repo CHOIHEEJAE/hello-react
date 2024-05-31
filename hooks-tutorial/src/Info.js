@@ -15,6 +15,7 @@ const Info = () => {
 
   const { name, nickname } = state;
   const onChange = (e) => {
+    debugger;
     dispatch(e.target);
   };
   return (

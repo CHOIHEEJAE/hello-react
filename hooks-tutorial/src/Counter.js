@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 
+//컴포넌트 업데이트 로직
 function reducer(state, action) {
   //type에 따른 작업 수행
   switch (action.type) {
@@ -13,7 +14,9 @@ function reducer(state, action) {
 }
 
 const Counter = () => {
+  //첫번째 파라미터에는 리듀서 함수, 두번째 파라미터에는 해당 리듀서 함수의 기본값 세팅
   const [state, dispatch] = useReducer(reducer, { value: 0 });
+  //state 는 현재 상태, dispatch는 액션을 발생시키는 함수로 씀
 
   return (
     <div>
