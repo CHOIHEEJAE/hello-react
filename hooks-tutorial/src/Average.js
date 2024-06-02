@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useMemo, useCallback, useRef } from "react";
-=======
-import React, { useState, useMemo, useCallback } from "react";
->>>>>>> refs/remotes/origin/master
 
 const getAverage = (numbers) => {
   console.log("평균값 계산 ... ");

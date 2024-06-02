@@ -21,7 +21,7 @@ class localVar extends Component {
 const RefSample = () => {
   const id = useRef(1);
   const setId = (e) => {
-    id.current = n;
+    id.current = e;
   };
 
   const printId = () => {
