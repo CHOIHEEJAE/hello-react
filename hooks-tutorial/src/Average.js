@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useMemo, useCallback, useRef } from "react";
+=======
+import React, { useState, useMemo, useCallback } from "react";
+>>>>>>> refs/remotes/origin/master
 
 const getAverage = (numbers) => {
   console.log("평균값 계산 ... ");
@@ -18,7 +22,6 @@ const Average = () => {
   const onChange = useCallback((e) => {
     setNumber(e.target.value);
   }, []); // useCallback : 두번째 파라미터가 빈 값일 경우 , 컴포넌트 첫 렌더링 때만 호출
-
   const onInsert = useCallback(
     (e) => {
       const nextList = list.concat(parseInt(number));
