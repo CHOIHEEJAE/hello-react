@@ -17,7 +17,7 @@ class localVar extends Component {
   }
 }
 
-//함수형 컴포넌트로 작성
+//함수형 컴포넌트로 작성하기 ::: 렌더링과 관련되지 않은 값을 관리할 때만 이러한 식으로 사용해야함 (ref 내의 값이 바뀌어도 컴포넌트가 렌더링 되지 않기 때문)
 const RefSample = () => {
   const id = useRef(1);
   const setId = (e) => {
