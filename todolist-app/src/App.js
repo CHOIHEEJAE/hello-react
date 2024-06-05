@@ -29,10 +29,20 @@ const App = () => {
     },
     [todos],
   );
+
+  //일정 수정하기
+  const onToggle = useCallback((id) => {
+    setTodos(
+      todos.map((e) => (e.id === id ? { ...e, checked: !e.checked } : e)),
+      // 수정하고자 하는 id값의 checked값 반전
+      [todos],
+    );
+  });
+
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} onRemove={onRemove} />
+      <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
     </TodoTemplate>
   );
 };
