@@ -25,3 +25,31 @@ const nextObjGood = {
 };
 
 console.log(obj === nextObjGood); // True or False ?
+
+const todos = [
+  {
+    id: 1,
+    checked: false,
+  },
+  {
+    id: 2,
+    checked: true,
+  },
+];
+
+const nextTodos = [...todos];
+
+nextTodos[0].checked = true;
+console.log(todos[0].checked === nextTodos[0].checked);
+
+nextTodos[0] = {
+  ...nextTodos[0],
+  checked: false,
+};
+
+console.log(todos[0] === nextTodos[0]);
+
+// TODO STUDY HEEJAE
+// 얕은 복사와 깊은 복사 차이점 점검
+// 얕은 복사는 주소값 복사로 객체 변경 시 실제 주소에 존재하는 객체가 변경됨
+// 깊은 복사는 주소가 아닌 객체 안에 값을 복사해 새로운 메모리에 저장, 깊은 복사를 통해 복사한 객체를 변경해도 실 주소에 있는 원래 객체 값은 변경되지 않음
