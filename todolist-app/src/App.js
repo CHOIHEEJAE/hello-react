@@ -19,7 +19,7 @@ function todoReducer(todos, action) {
   switch (action.type) {
     case 'INSERT':
       return todos.concat(action.todo);
-    case 'REEMOVE':
+    case 'REMOVE':
       return todos.filter((todo) => todo.id !== action.id);
     case 'TOGGLE':
       return todos.map((todo) =>
@@ -30,7 +30,7 @@ function todoReducer(todos, action) {
   }
 }
 const App = () => {
-  const [todos, dispatch] = useReducer(todoReducer, '', createBulkTodos);
+  const [todos, dispatch] = useReducer(todoReducer, undefined, createBulkTodos);
   // const [todos, setTodos] = useState(createBulkTodos);
   const nextId = useRef(2501);
 
