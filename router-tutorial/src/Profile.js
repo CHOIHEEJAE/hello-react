@@ -13,9 +13,13 @@ const data = {
 };
 
 const Profile = () => {
+  // 비구조화 할당
   const { userInfo } = useParams();
   const profile = data[userInfo];
-  debugger;
+  // 비구조화 할당 하지 않으면 아래와 같이 작성함 (함수형 컴포넌트에서는 주로 비구조화 할당을 통해 객체를 배정함)
+  //   const userInfo = useParam();
+  //   const profile = data[userInfo.userInfo]
+
   if (!profile) {
     return <div>존재하지 않는 사용자 입니다</div>;
   }
