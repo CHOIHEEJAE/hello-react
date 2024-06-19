@@ -78,7 +78,7 @@ const Categories = ({ category, onSelect }) => {
         <Category
           key={param.name}
           $active={category === param.name}
-          // STUDY HEEJAE -> obsidian : Warning Received true for a non-boolean attribute active
+          onClick={() => onSelect(param.name)}
         >
           {param.text}
         </Category>
